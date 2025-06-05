@@ -1,0 +1,386 @@
+    html, body {
+      height: 100%;
+      min-height: 100vh;
+      scroll-behavior: smooth;
+    }
+    body {
+      background: linear-gradient(135deg, #e0f7fa 0%, #ccfbf1 100%);
+      font-family: 'Roboto', Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+    }
+    .header-bar {
+      background: rgba(255,255,255,0.98);
+      box-shadow: 0 4px 24px 0 rgba(0,0,0,0.07);
+      border-bottom: 2px solid #14b8a6;
+    }
+    .logo-img {
+      height: 46px;
+      margin-left: 2px;
+      margin-right: 6px;
+      vertical-align: middle;
+      display: inline-block;
+      filter: drop-shadow(0 2px 8px #14b8a660);
+      transition: transform .2s;
+    }
+    .logo-img:hover {
+      transform: scale(1.05) rotate(-3deg);
+    }
+    .slogan {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      font-weight: bold;
+      background: linear-gradient(90deg,#16a34a 0%, #14b8a6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      letter-spacing: 2px;
+    }
+    @media (max-width: 576px) {
+      .slogan { font-size: 1.2rem; }
+      .logo-img { height: 34px; }
+    }
+    .green-divider {
+      height: 10px;
+      min-height: 10px;
+      width: 100%;
+      border: none;
+      margin: 0 0 28px 0;
+      padding: 0;
+      background: linear-gradient(90deg, #22c55e 0%, #14b8a6 100%);
+      opacity: 0.96;
+      box-shadow: 0 2px 12px 0 #14b8a699;
+    }
+    .grow-main {
+      flex: 1 0 auto;
+      min-height: 0;
+      padding-top: 16px !important;
+      padding-bottom: 32px;
+    }
+    .shadow-lg { box-shadow: 0 1rem 2rem rgba(0,0,0,.10) !important; }
+    .shadow-inner { box-shadow: inset 0 2px 8px rgba(0,0,0,.05) !important; height: 130px;}
+    .main-card {
+      background: transparent;
+      box-shadow: 0 4px 16px 0 #14b8a633;
+      border: none;
+      margin-bottom: 1.5rem;
+      
+    }
+
+    .section-title-block {
+      background: #dc2626;
+      color: #fff;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 12px 0 12px 0;
+      border-radius: 0;
+      margin-bottom: 20px;
+    }
+    .section-content-block {
+      background: #ff0000;
+      color: #fff;
+      text-align: left;
+      padding: 20px 18px 10px 18px;
+      height: 320px;
+      font-size: 1rem;
+      border-radius: 0;
+    }
+    .section-title-block-yellow {
+      background: #ffff00;
+      color: #ff0000;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 12px 0 12px 0;
+      border-radius: 0;
+      margin-bottom: 20px;
+    }
+    .expose-content-block {
+      background: #ffff00;
+      color: #ff0000;
+      padding: 24px 18px 10px 18px;
+      font-size: 1rem;
+      border-radius: 0;
+    }
+    .reward-table {
+      background: rgb(255,0,0) !important;
+      overflow: hidden;
+    }
+    .reward-table thead, .reward-table tbody, .reward-table tr, .reward-table th, .reward-table td {
+      background: transparent !important;
+      color: #fff !important;
+      border-color: #000 !important;
+    }
+    .performance-table {
+      background: rgb(255,255,0) !important;
+      color: rgb(255,0,0) !important;
+      overflow: hidden;
+    }
+    .performance-table thead, .performance-table tbody, .performance-table tr, .performance-table th, .performance-table td {
+      background: rgb(255,255,0) !important;
+      color: rgb(255,0,0) !important;
+      border-color: #000 !important;
+    }
+    .performance-table thead tr th {
+      color: rgb(255,0,0) !important;
+      background: rgb(255,255,0) !important;
+    }
+    .performance-table tr.bg-warning, .performance-table tr.bg-warning.bg-opacity-50 {
+      background: rgba(253,224,71,0.5) !important;
+      color: rgb(255,0,0) !important;
+    }
+    .performance-table tr:hover {
+      background: rgba(253,224,71,0.21) !important;
+    }
+
+
+
+
+    .col-md-4 > .main-card,
+    .col-md-4 > .proposal-section {
+      margin-bottom: 1.5rem;
+    }
+    .birthday-red-bg {
+      background: rgb(255,0,0) !important;
+      color: #fff;
+    }
+    .proposal-section {
+      background: rgb(255,0,0) !important;
+      color: #fff;
+      box-shadow: 0 1rem 2rem rgba(0,0,0,.10);
+      padding: 1.5rem;
+    }
+    .proposal-inner {
+      border: 2px solid #fff;
+      padding: 1rem;
+      background: rgba(153,27,27,0.10);
+    }
+    .qr-bg {
+      background: linear-gradient(135deg, #fafafa 0%, #f3f4f6 100%);
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 1rem 2rem rgba(0,0,0,.07);
+    }
+    @keyframes fadeIn {
+  from {
+    opacity: 0; /* 渐隐 */
+    transform: translateY(20px); /* 向下平移 */
+  }
+  to {
+    opacity: 1; /* 渐显 */
+    transform: translateY(0); /* 回到原位 */
+  }
+}
+
+    .birthday-names {
+  height: 380px; /* 固定高度 */
+animation: fadeIn 1s;
+
+}
+    .birthday-names > div {
+      padding: 0.25rem 0;
+      transition: background .2s;
+    }
+
+    .birthday-names .col {
+        margin-top: 0; /* 移除顶部外边距 */
+  padding-top: 0; 
+display: flex; /* 使用 Flexbox 布局 */
+justify-content: center; /* 水平居中 */
+text-align: center; /* 文本居中 */
+}
+
+
+    .birthday-names > div:hover {
+      background: rgba(220,38,38,0.17);
+      color: #fff;
+    }
+    .table th, .table td {
+      vertical-align: middle;
+    }
+    .notice-company, .notice-date {
+      text-align: right !important;
+      width: 100%;
+      display: block;
+      
+    }
+    /* 让三栏主内容块底部对齐 */
+    .row.align-items-stretch {
+      align-items: stretch;
+    }
+    .main-equal-card {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+    .birthday-red-bg,
+    .table-responsive.reward-table {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+    }
+
+
+    .proposal-section {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: stretch;
+    }
+    .proposal-inner {
+    flex-grow: unset; /* 移除对容器高度的强制填充 */
+    display: block; /* 恢复默认布局行为 */
+    padding: 1rem; /* 保留现有内边距 */
+    /* background: rgba(153, 27, 27, 0.10); 保留现有背景 */
+    }
+
+    .reward-table {
+      background: rgb(255,0,0) !important;
+  
+      overflow-y: auto; /* 当内容超过最大高度时启用垂直滚动 */
+    }
+    .reward-table thead, .reward-table tbody, .reward-table tr, .reward-table th, .reward-table td {
+      background: transparent !important;
+      color: #fff !important;
+      border-color: #000 !important;
+
+      line-height: 1.5; /* 设置行高 */
+      min-height: 50px; /* 设置单元格的最小高度，具体值可根据需求调整 */
+      height: 50px; /* 确保行高固定 */
+      vertical-align: middle; /* 内容垂直居中 */
+    }
+
+    .table-responsive {
+      overflow-y: hidden; /* 隐藏垂直滚动条 */
+    }
+
+.reward-table {
+  background: rgb(255,0,0) !important;
+  max-height: 500px; /* 设置表格的最大高度 */
+  position: relative; /* 为固定表头做准备 */
+}
+
+.reward-table thead th {
+  background-color: #dc2626 !important;
+  color: #fff !important;
+  position: sticky; /* 固定表头 */
+  top: 0; /* 确保表头固定在顶部 */
+  z-index: 1; /* 确保表头在内容之上 */
+}
+
+
+.scrollable-table-body {
+  overflow-y: auto; /* 使表格主体可滚动 */
+  height: 100%; /* 确保滚动条只在内容区域生效 */
+}
+
+.summary-row td {
+  border: 2px solid #000;
+  background: rgba(253, 224, 71, 0.21);
+}
+.summary-row {
+  position: sticky;
+  bottom: 0;
+  z-index: 1;
+  border: 2px solid #000 !important;
+}
+
+.performance-table {
+  max-height: 300px; /* 设置表格的最大高度 */
+  overflow-y: auto; /* 当内容超过最大高度时启用垂直滚动 */
+  
+}
+
+.performance-table thead th, .performance-table tbody td {
+    line-height: 1.5; /* 设置行高 */
+    min-height: 70px; /* 设置单元格的最小高度，具体值可根据需求调整 */
+    height: 70px; /* 确保行高固定 */
+    vertical-align: middle; /* 内容垂直居中 */
+   
+  }
+
+
+.performance-table {
+max-height: 700px; /* 设置表格的最大高度 */
+position: relative; /* 为固定表头做准备 */
+}
+
+.performance-table thead th {
+
+  position: sticky; /* 使表头固定 */
+  top: 0; /* 表头固定在表格顶部 */
+  z-index: 2; /* 确保表头显示在滚动内容之上 */
+  background-color: rgb(255, 255, 0) !important; /* 确保背景色不透明 */
+  border-top: 2px solid #000 !important; /* 顶部边框固定 */
+  border-bottom: 2px solid #000 !important; /* 底部边框固定 */
+
+}
+
+
+
+.scrollable-table-body {
+overflow-y: auto; /* 使表格主体可滚动 */
+height: 100%; /* 确保滚动条只在内容区域生效 */
+}
+
+.fixed-height {
+  height: 200px; /* 固定高度 */
+  display: flex;
+  flex-direction: column; /* 默认从上到下排列内容 */
+  justify-content: flex-start; /* 确保从顶部开始对齐 */
+
+}
+
+
+
+/* 设置下面文字的字体大小 */
+.text-center.bg-danger.bg-opacity-25 p.small {
+  font-size: 1.2rem; /* 调整为更大的字体大小 */
+}
+
+.section-content-block {
+  position: relative; /* 确保子元素可以使用绝对定位 */
+  padding-bottom: 40px; /* 给内容底部留出空间，避免被固定元素覆盖 */
+}
+
+.notice-company,
+.notice-date {
+  position: absolute;
+  right: 20px; /* 距离右边 10px */
+}
+
+.notice-company {
+  bottom: 30px; /* 距离底部 30px */
+}
+
+.notice-date {
+  bottom: 10px; /* 距离底部 10px */
+}
+
+.qr-bg {
+  width: 160px;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;     /* 垂直居中 */
+  justify-content: center; /* 水平居中 */
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.qr-inner {
+  width: 100px;      /* 固定宽度 */
+  height: 100px;     /* 固定高度 */
+}
+
+.qr-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* 保持二维码比例，不拉伸 */
+}

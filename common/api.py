@@ -16,10 +16,10 @@ def re_getaccesstoken():
     }
     unix = int(time.time() * 1000)
     resGroupSecret_data =  {
-                        "eid": "13410137",
-                        "secret": "IPGx7HUPuFbQk1gEGeapszRqz7Dbgx1z",
+                        "eid": "***",
+                        "secret": "***",
                         "timestamp": unix,
-                        "scope": "resGroupSecret"
+                        "scope": "***"
                     }
     resGroupSecret_response = requests.post(url, data=json.dumps(resGroupSecret_data), headers=headers)
     return resGroupSecret_response
@@ -29,10 +29,10 @@ def getall_data(access_token):
     access_token = access_token.json()['data']['accessToken']
     url = f"https://www.yunzhijia.com/gateway/openimport/open/person/getall?accessToken={access_token}"
     
-    data_param = json.dumps({"eid": "13410137","begin": 0,"count": 1000})
+    data_param = json.dumps({"eid": "***","begin": 0,"count": 1000})
 
     post_data = {
-        "eid": "13410137",
+        "eid": "***",
         "nonce":"11",
         "data": data_param
     }
@@ -118,9 +118,9 @@ def team_getaccesstoken():
     
     unix = int(time.time() * 1000)
 
-    team_data = {'appId': 'SP13410137',
-             'eid': '13410137',
-             'secret': 'T2iFaqJkwdafR4ri3257x2WJ7VRBgU',
+    team_data = {'appId': '***',
+             'eid': '***',
+             'secret': '***',
              'timestamp': unix,
              'scope': 'team'
             }
